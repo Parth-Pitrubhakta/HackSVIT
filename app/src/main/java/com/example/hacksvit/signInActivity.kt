@@ -69,7 +69,7 @@ class signInActivity : AppCompatActivity() {
                     val user = auth.currentUser
 
                     if( task.result!!.additionalUserInfo!!.isNewUser) {
-                        val intent = Intent(this, ngoLoginPage::class.java)
+                        val intent = Intent(this, loginSelectPage::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
                         Log.w(TAG, "Redirewcted to mainpage", task.exception)
