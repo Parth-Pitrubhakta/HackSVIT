@@ -42,8 +42,8 @@ class volunteerLoginPage : AppCompatActivity() {
         val userLogindata1 = userLogindata(Name, Address, Email, Phone_no)
         val data = userLogindata1.toMap()
 
-        val studentdataupdates = hashMapOf<String, Any>("Volunteers/${Firebase.auth.uid}/" to data)
-        database.updateChildren(studentdataupdates).addOnSuccessListener {
+        val userdataupdates = hashMapOf<String, Any>("Volunteers/${Firebase.auth.uid}/" to data)
+        database.updateChildren(userdataupdates).addOnSuccessListener {
             Log.d(ContentValues.TAG, "Successfully stored user data to firebase db")
             startActivity(Intent(this, MainActivity::class.java))
 

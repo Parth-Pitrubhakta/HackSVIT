@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
@@ -31,6 +32,7 @@ class signInActivity : AppCompatActivity() {
             .build()
 
         val googleSignInClient = GoogleSignIn.getClient(this, gso)
+
 
         signin_button.setOnClickListener {
             val signInIntent = googleSignInClient.signInIntent
@@ -67,7 +69,7 @@ class signInActivity : AppCompatActivity() {
                     val user = auth.currentUser
 
                     if( task.result!!.additionalUserInfo!!.isNewUser) {
-                        val intent = Intent(this, volunteerLoginPage::class.java)
+                        val intent = Intent(this, loginSelectPage::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
                         Log.w(TAG, "Redirewcted to mainpage", task.exception)
