@@ -30,7 +30,6 @@ class ngoLoginPage : AppCompatActivity() {
 
             )
 
-
         }
 
     }
@@ -46,7 +45,6 @@ class ngoLoginPage : AppCompatActivity() {
         database.updateChildren(ngologinupdates).addOnSuccessListener {
             Log.d(ContentValues.TAG, "Successfully stored user data to firebase db")
             startActivity(Intent(this, MainActivity::class.java))
-
       }
     }
 }
