@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+
         <entry key="..\:/Users/Admin/OneDrive/Desktop/HackSVIT/app/src/main/res/drawable/btm_nav_icon_color.xml" value="0.1875" />
         <entry key="..\:/Users/Admin/OneDrive/Desktop/HackSVIT/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1875" />
         <entry key="..\:/Users/Admin/OneDrive/Desktop/HackSVIT/app/src/main/res/drawable/ic_dashboard.xml" value="0.1875" />
@@ -14,6 +15,20 @@
         <entry key="..\:/Users/Admin/OneDrive/Desktop/HackSVIT/app/src/main/res/layout/fragment_my_account.xml" value="0.2359375" />
         <entry key="..\:/Users/Admin/OneDrive/Desktop/HackSVIT/app/src/main/res/layout/fragment_nearby__n_g_o.xml" value="0.2359375" />
         <entry key="..\:/Users/Admin/OneDrive/Desktop/HackSVIT/app/src/main/res/menu/btm_nav_menu.xml" value="0.25" />
+
+        <entry key="..\:/Android/HackSVIT/app/src/main/res/drawable/accountwhite.xml" value="0.1475" />
+        <entry key="..\:/Android/HackSVIT/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1475" />
+        <entry key="..\:/Android/HackSVIT/app/src/main/res/layout/activity_account1.xml" value="0.19010416666666666" />
+        <entry key="..\:/Android/HackSVIT/app/src/main/res/layout/activity_addcampaigns.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/HackSVIT/app/src/main/res/layout/activity_editprofile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/HackSVIT/app/src/main/res/layout/activity_login_select_page.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/HackSVIT/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/HackSVIT/app/src/main/res/layout/activity_myprofile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/HackSVIT/app/src/main/res/layout/activity_myprofileuser.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/HackSVIT/app/src/main/res/layout/activity_ngo_login_page.xml" value="0.25" />
+        <entry key="..\:/Android/HackSVIT/app/src/main/res/layout/activity_sign_in.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/HackSVIT/app/src/main/res/layout/activity_volunteer_login_page.xml" value="0.25" />
+
         <entry key="..\:/Users/Parth/Desktop/App Development/HackSVIT/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.143" />
         <entry key="..\:/Users/Parth/Desktop/App Development/HackSVIT/app/src/main/res/layout/activity_login_select_page.xml" value="0.264" />
         <entry key="..\:/Users/Parth/Desktop/App Development/HackSVIT/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
@@ -23,7 +38,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

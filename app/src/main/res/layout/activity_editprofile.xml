@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ngoLoginPage"
-    android:background="@color/backgroundColor">
+    tools:context=".editprofile"
+    android:background="@color/white">
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:text="NGO Login"
-        android:textColor="#EADAFD"
-        android:textSize="25sp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="64dp"
+        android:text="Edit Profile"
+        android:textColor="@color/black"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,81 +26,74 @@
         android:layout_width="165dp"
         android:layout_height="168dp"
         android:layout_gravity="center"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="168dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_my_profile"
+        android:src="@drawable/accountwhite"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
-        android:text="Personal Details: "
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPorfilePhoto" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/name_ngo"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/edit_text"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:hint="Sakshi"
+        android:textColorHint="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        android:hint="Name"
-        android:textColorHint="@color/white"
-        />
-
+        app:layout_constraintTop_toTopOf="@+id/ivPorfilePhoto"
+        app:layout_constraintVertical_bias="0.389" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/address_ngo"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
         android:layout_marginTop="8dp"
-        android:hint="Add"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/name_ngo"
-        app:layout_constraintStart_toStartOf="@+id/name_ngo"
-        app:layout_constraintTop_toBottomOf="@+id/name_ngo" />
+        android:hint="NYC"
+        android:textColorHint="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/Email_ngo"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
         android:layout_marginTop="8dp"
-        android:hint="Email"
-        android:textColorHint="@color/white"
+        android:hint="prathmeshpandety9@gmail.com"
+        android:textSize="20sp"
+        android:textColorHint="@color/black"
+
         app:layout_constraintEnd_toEndOf="@+id/address_ngo"
         app:layout_constraintStart_toStartOf="@+id/address_ngo"
         app:layout_constraintTop_toBottomOf="@+id/address_ngo" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/Pnone_no_ngo"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
         android:layout_marginTop="8dp"
-        android:hint="Phone no"
-        android:textColorHint="@color/white"
+        android:hint="9152117191"
+        android:textSize="25sp"
+        android:textColorHint="@color/black"
+
         app:layout_constraintEnd_toEndOf="@+id/Email_ngo"
         app:layout_constraintStart_toStartOf="@+id/Email_ngo"
         app:layout_constraintTop_toBottomOf="@+id/Email_ngo" />
 
-    <Button
-        android:id="@+id/Submit_btn_ngo"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:text="Submit"
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="230dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:text="Save"
         android:textColor="@color/white"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:cornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="@+id/Pnone_no_ngo"
