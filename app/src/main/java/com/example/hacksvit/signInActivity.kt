@@ -71,8 +71,6 @@ class signInActivity : AppCompatActivity() {
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
                         Log.w(TAG, "Redirewcted to mainpage", task.exception)
-
-                        //startActivity(Intent(this,SignupActivity::class.java))
                     }
                     else {
                         val intent = Intent(this, signInActivity::class.java)
