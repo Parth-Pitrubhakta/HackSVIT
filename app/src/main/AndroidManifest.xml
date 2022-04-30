@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hacksvit">
+    package="com.example.hacksvit" >
+
 
     <application
         android:allowBackup="true"
@@ -8,8 +9,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HackSVIT">
+        android:theme="@style/Theme.HackSVIT" >
 
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_uCJhRdrgYWVcz6" />
+
+
+        <activity
+            android:name=".paymentIntergation"
+            android:exported="false" />
         <activity
             android:name=".profileNgo"
             android:exported="false" />
@@ -27,7 +36,7 @@
             android:exported="false" />
         <activity
             android:name=".signInActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,7 +60,5 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
-
 
 </manifest>
