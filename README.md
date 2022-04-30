@@ -4,7 +4,7 @@ Project Name: CHARITABLE
 
 Tagline: The Charity App
 
-The problem it solves: 
+The problem it solves: Helps to connect the donors and NGO's in at a single place.
 
 Challenges we ran into: 
 
