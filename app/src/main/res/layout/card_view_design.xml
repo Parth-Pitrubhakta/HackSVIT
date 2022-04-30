@@ -16,7 +16,7 @@
         android:padding="5dp">
 
         <TextView
-            android:id="@+id/cardView_Name"
+            android:id="@+id/text_name_donors"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -37,10 +37,10 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView_Name" />
+            app:layout_constraintTop_toBottomOf="@+id/text_name_donors" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/text_category_donor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
@@ -75,6 +75,7 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <TextView
+            android:id="@+id/text_donations_donors"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="10000"
