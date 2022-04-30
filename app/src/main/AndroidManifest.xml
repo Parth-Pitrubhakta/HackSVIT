@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HackSVIT">
         <activity
+            android:name=".edit_Profile_Ngo"
+            android:exported="false" />
+        <activity
             android:name=".profileNgo"
             android:exported="false" />
         <activity
@@ -45,6 +48,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
