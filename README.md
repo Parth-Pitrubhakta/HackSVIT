@@ -4,11 +4,13 @@ Project Name: CHARITABLE
 
 Tagline: The Charity App
 
-The problem it solves: Helps to connect the donors and NGO's in at a single place.
+The problem it solves: Helps to connect the donors and NGO's in a single place.
 
-Challenges we ran into: 
+Challenges we ran into: 1. Implementing RazorPay for payment gateway.
+2. Google Authentication
+3.  Fetching realtime data
 
-Technologies we used:  Android Studio, Firebase, Figma
+Technologies we used:  Android Studio, Firebase, Figma, Canva.
 
 Links: 1. Figma: https://www.figma.com/file/RO3KvmPcuYt8qc6WyaItCM/CharityHub?node-id=0%3A1 <br/>
        2. GitHub: https://github.com/Parth-Pitrubhakta/HackSVIT <br/>
