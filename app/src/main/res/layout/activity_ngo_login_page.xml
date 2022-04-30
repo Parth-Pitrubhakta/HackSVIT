@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ivPorfilePhoto" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/edit_text"
+        android:id="@+id/name_ngo"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
@@ -61,39 +61,40 @@
 
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText2"
+        android:id="@+id/address_ngo"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:hint="Add"
         android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/edit_text"
-        app:layout_constraintStart_toStartOf="@+id/edit_text"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text" />
+        app:layout_constraintEnd_toEndOf="@+id/name_ngo"
+        app:layout_constraintStart_toStartOf="@+id/name_ngo"
+        app:layout_constraintTop_toBottomOf="@+id/name_ngo" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
+        android:id="@+id/Email_ngo"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:hint="Email"
         android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/textInputEditText2"
-        app:layout_constraintStart_toStartOf="@+id/textInputEditText2"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
+        app:layout_constraintEnd_toEndOf="@+id/address_ngo"
+        app:layout_constraintStart_toStartOf="@+id/address_ngo"
+        app:layout_constraintTop_toBottomOf="@+id/address_ngo" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText3"
+        android:id="@+id/Pnone_no_ngo"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:hint="Phone no"
         android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/textInputEditText"
-        app:layout_constraintStart_toStartOf="@+id/textInputEditText"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
+        app:layout_constraintEnd_toEndOf="@+id/Email_ngo"
+        app:layout_constraintStart_toStartOf="@+id/Email_ngo"
+        app:layout_constraintTop_toBottomOf="@+id/Email_ngo" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
+        android:id="@+id/Submit_btn_ngo"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
@@ -101,8 +102,8 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:cornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/textInputEditText3"
-        app:layout_constraintStart_toStartOf="@+id/textInputEditText3"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText3" />
+        app:layout_constraintEnd_toEndOf="@+id/Pnone_no_ngo"
+        app:layout_constraintStart_toStartOf="@+id/Pnone_no_ngo"
+        app:layout_constraintTop_toBottomOf="@+id/Pnone_no_ngo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

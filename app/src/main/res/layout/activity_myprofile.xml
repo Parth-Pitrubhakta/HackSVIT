@@ -51,7 +51,7 @@
 
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText2"
+        android:id="@+id/address_ngo"
         android:layout_width="250dp"
         android:layout_height="65dp"
         android:layout_marginTop="16dp"
@@ -65,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edit_text" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
+        android:id="@+id/Email_ngo"
         android:layout_width="250dp"
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
@@ -73,10 +73,10 @@
         android:hint="Add Campaigns"
         android:textSize="25sp"
         android:textColorHint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/textInputEditText2"
+        app:layout_constraintEnd_toEndOf="@+id/address_ngo"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textInputEditText2"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText2" />
+        app:layout_constraintStart_toStartOf="@+id/address_ngo"
+        app:layout_constraintTop_toBottomOf="@+id/address_ngo" />
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="210dp"

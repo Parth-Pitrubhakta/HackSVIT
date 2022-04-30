@@ -37,9 +37,6 @@ class signInActivity : AppCompatActivity() {
             startActivityForResult(signInIntent, RC_SIGN_IN)
         }
 
-
-
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data_signin: Intent?) {
@@ -70,7 +67,7 @@ class signInActivity : AppCompatActivity() {
                     val user = auth.currentUser
 
                     if( task.result!!.additionalUserInfo!!.isNewUser) {
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, volunteerLoginPage::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
                         Log.w(TAG, "Redirewcted to mainpage", task.exception)
