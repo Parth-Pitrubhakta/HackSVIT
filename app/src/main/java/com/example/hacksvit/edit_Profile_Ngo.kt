@@ -19,7 +19,6 @@ class edit_Profile_Ngo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profile_ngo)
 
-
         val name_edit = findViewById<EditText>(R.id.name_vol_edit)
         val email_edit = findViewById<EditText>(R.id.email_vol_edit)
         val address_edit = findViewById<EditText>(R.id.address_vol_edit)
@@ -35,7 +34,6 @@ class edit_Profile_Ngo : AppCompatActivity() {
             )
 
         }
-
 
         val database = Firebase.database.getReference("NGO/${Firebase.auth.uid}")
         database.addValueEventListener(object : ValueEventListener {

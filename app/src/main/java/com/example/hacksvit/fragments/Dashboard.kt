@@ -35,8 +35,6 @@ class Dashboard : Fragment() {
         data1.add(imagedata(R.drawable.image1))
         data1.add(imagedata(R.drawable.image2))
 
-
-
         val recycler = view.findViewById<RecyclerView>(R.id.recyclerView1)
         recycler.layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL ,false)
         recycler.adapter = ImageSS_Adapterr(data1)
