@@ -46,5 +46,6 @@ class ngoLoginPage : AppCompatActivity() {
             Log.d(ContentValues.TAG, "Successfully stored user data to firebase db")
             startActivity(Intent(this, MainActivity::class.java))
       }
+
     }
 }

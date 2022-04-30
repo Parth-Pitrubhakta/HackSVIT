@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
@@ -31,6 +32,7 @@ class signInActivity : AppCompatActivity() {
             .build()
 
         val googleSignInClient = GoogleSignIn.getClient(this, gso)
+
 
         signin_button.setOnClickListener {
             val signInIntent = googleSignInClient.signInIntent
