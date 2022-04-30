@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hacksvit.Adapter.ImageSS_Adapterr
+import com.example.hacksvit.Adapter.NgoList_Adapter
 import com.example.hacksvit.R
 import com.example.hacksvit.data.imagedata
 import com.example.hacksvit.data.ngodata
@@ -40,41 +41,40 @@ class Dashboard : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val data1= arrayListOf<imagedata>()
-        val data2= arrayListOf<ngodata>()
+        val data1 = arrayListOf<imagedata>()
 
         data1.add(imagedata(R.drawable.image1))
         data1.add(imagedata(R.drawable.image2))
 
 
-        val database = FirebaseDatabase.getInstance().getReference("NGO/${Firebase.auth.uid}/Campaign")
-         val ngodata = arrayListOf<ngodata>()
+       val database = FirebaseDatabase.getInstance().getReference("NGO/Campaign")
+        val ngo_data = arrayListOf<ngodata>()
 
         database.addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onCancelled(p0: DatabaseError) {
+           override fun onCancelled(p0: DatabaseError) {
 
             }
 
-            override fun onDataChange(p0: DataSnapshot) {
-                for (i in p0.children) {
+           override fun onDataChange(p0: DataSnapshot) {
+               for (i in p0.children) {
 
-                    val compdat = i.getValue<ngodata>()
+                    val ngodat = i.getValue<ngodata>()
 
-                    compdat?.let { ngodata.add(it) }
-                    Log.e(ContentValues.TAG,"user info" +compdat)
+                   ngodat?.let { ngo_data.add(it) }
+                   Log.e(ContentValues.TAG, "user info" + ngodat)
+               }
+        val recycler1 = view.findViewById<RecyclerView>(R.id.recyclerView1)
+        recycler1.layoutManager =
+            LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, true)
+        recycler1.adapter = ImageSS_Adapterr(data1)
 
-
-                }
-
-
-
-
-        val recycler = view.findViewById<RecyclerView>(R.id.recyclerView1)
+        val recycler = view.findViewById<RecyclerView>(R.id.recyclerView2)
         recycler.layoutManager = GridLayoutManager(view.context, 2)
-        recycler.adapter = ImageSS_Adapterr(data1)
+        recycler.adapter = NgoList_Adapter(ngo_data)
 
 
-             }
+         }
+
         })
     }
 }

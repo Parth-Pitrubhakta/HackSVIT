@@ -35,7 +35,8 @@ class addcampaigns : AppCompatActivity() {
         val addcampaign1 = addcampaigndata(campaign_name, campaign_cat, time_period, venue)
         val data = addcampaign1.toMap()
         val key = database.child("NGO").push().key
-        val addcampaign_updates = hashMapOf<String, Any>("NGO/${Firebase.auth.uid}/Campaign/$key" to data)
+        val addcampaign_updates = hashMapOf<String, Any>("NGO/${Firebase.auth.uid}/Campaign/$key" to data,
+        "NGO/Campaign/$key" to data)
         database.updateChildren(addcampaign_updates).addOnSuccessListener {
             Log.d(ContentValues.TAG, "Successfully stored user data to firebase db")
             startActivity(Intent(this, profileNgo::class.java))

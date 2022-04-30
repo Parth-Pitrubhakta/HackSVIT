@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ngoLoginPage"
-    android:background="@color/backgroundColor">
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/textView"
@@ -14,7 +14,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="NGO Login"
-        android:textColor="#EADAFD"
+        android:textColor="@color/backgroundColor"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="28dp"
         android:text="Personal Details: "
-        android:textColor="#FFFFFF"
+        android:textColor="@color/backgroundColor"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,12 +52,13 @@
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:textSize="18dp"
+        android:textColor="@color/backgroundColor"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         android:hint="Name"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/purple_200"
         />
 
 
@@ -68,7 +69,7 @@
         android:layout_marginTop="8dp"
         android:hint="Add"
         android:textSize="18dp"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/purple_200"
         app:layout_constraintEnd_toEndOf="@+id/name_ngo"
         app:layout_constraintStart_toStartOf="@+id/name_ngo"
         app:layout_constraintTop_toBottomOf="@+id/name_ngo" />
@@ -80,7 +81,7 @@
         android:layout_marginTop="8dp"
         android:hint="Email"
         android:textSize="18dp"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/purple_200"
         app:layout_constraintEnd_toEndOf="@+id/address_ngo"
         app:layout_constraintStart_toStartOf="@+id/address_ngo"
         app:layout_constraintTop_toBottomOf="@+id/address_ngo" />
@@ -92,7 +93,7 @@
         android:layout_marginTop="8dp"
         android:hint="Phone no"
         android:textSize="18dp"
-        android:textColorHint="@color/white"
+        android:textColorHint="@color/purple_200"
         app:layout_constraintEnd_toEndOf="@+id/Email_ngo"
         app:layout_constraintStart_toStartOf="@+id/Email_ngo"
         app:layout_constraintTop_toBottomOf="@+id/Email_ngo" />
