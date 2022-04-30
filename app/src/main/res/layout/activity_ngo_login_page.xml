@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:text="Volunteer Login"
+        android:text="NGO Login"
         android:textColor="#EADAFD"
         android:textSize="25sp"
         android:textStyle="bold"

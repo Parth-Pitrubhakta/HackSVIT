@@ -34,18 +34,19 @@ class ngoLoginPage : AppCompatActivity() {
 
     }
 
-    private fun updatedata(Name_ngo: String,Address_ngo: String, Email_ngo: String, Phone_no_ngo: String) {
+    private fun updatedata(Name_ngo: String, Address_ngo: String, Email_ngo: String, Phone_no_ngo: String) {
+
 
         val database = Firebase.database.reference
-        val ngoLogindata1 = ngoLogindata(Name_ngo, Address_ngo, Email_ngo, Phone_no_ngo)
-        val data = ngoLogindata1.toMap()
+        val ngoLoginPage1 = userLogindata(Name_ngo, Address_ngo, Email_ngo, Phone_no_ngo)
+        val data = ngoLoginPage1.toMap()
 
-        val ngologindata = hashMapOf<String, Any>("NGO/${Firebase.auth.uid}/" to data)
-        database.updateChildren(ngologindata).addOnSuccessListener {
+        val ngologinupdates = hashMapOf<String, Any>("NGO/${Firebase.auth.uid}/" to data)
+        database.updateChildren(ngologinupdates).addOnSuccessListener {
             Log.d(ContentValues.TAG, "Successfully stored user data to firebase db")
             startActivity(Intent(this, MainActivity::class.java))
 
+      }
 
-        }
     }
 }
