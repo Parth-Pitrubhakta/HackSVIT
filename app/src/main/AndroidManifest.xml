@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HackSVIT">
-        <activity
-            android:name=".edit_Profile_Ngo"
-            android:exported="false" />
+
         <activity
             android:name=".profileNgo"
             android:exported="false" />
@@ -29,6 +27,9 @@
             android:exported="false" />
         <activity
             android:name=".signInActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,5 +54,7 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
+
 
 </manifest>
