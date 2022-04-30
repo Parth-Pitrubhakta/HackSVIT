@@ -13,8 +13,8 @@
         <ImageView
 
             android:id="@+id/myprofielvolunteer"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/ic_my_profile"
@@ -84,16 +84,16 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
 
-        <ImageButton
-            android:id="@+id/editprofile_vol"
-            android:layout_width="308dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="36dp"
-            android:background="@drawable/editprofielimg"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.481"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phone_vol_edit" />
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/editprofile_vol"-->
+        <!--            android:layout_width="308dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginTop="36dp"-->
+        <!--            android:background="@drawable/editprofielimg"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.481"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/phone_vol_edit" />-->
 
         <ImageButton
             android:id="@+id/logout_vol"
@@ -101,15 +101,14 @@
             android:layout_height="65dp"
             android:background="@drawable/ic_logout"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/editprofile_vol"
-            app:layout_constraintHorizontal_bias="0.473"
-            app:layout_constraintStart_toStartOf="@+id/editprofile_vol"
-            app:layout_constraintTop_toBottomOf="@+id/editprofile_vol"
-            app:layout_constraintVertical_bias="0.163" />
+            app:layout_constraintEnd_toEndOf="@+id/phone_vol_edit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/phone_vol_edit"
+            app:layout_constraintTop_toBottomOf="@+id/phone_vol_edit"
+            app:layout_constraintVertical_bias="0.492" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </FrameLayout>
