@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HackSVIT">
-
+        <activity
+            android:name=".donorsOrContributorsPage"
+            android:exported="false" />
         <activity
             android:name=".profileNgo"
             android:exported="false" />
@@ -51,7 +53,5 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
-     
 
 </manifest>
