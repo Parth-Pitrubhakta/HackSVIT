@@ -40,7 +40,7 @@ class ngoLoginPage : AppCompatActivity() {
         val ngologinupdates = hashMapOf<String, Any>("NGO/${Firebase.auth.uid}/" to data)
         database.updateChildren(ngologinupdates).addOnSuccessListener {
             Log.d(ContentValues.TAG, "Successfully stored user data to firebase db")
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, profileNgo::class.java))
       }
 
     }
