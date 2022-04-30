@@ -8,7 +8,7 @@ The problem it solves: Helps to connect the donors and NGO's in a single place.
 
 Challenges we ran into: 1. Implementing RazorPay for payment gateway.
 2. Google Authentication
-3.  Fetching realtime data
+3.  Sending acknowledgment notification to the user after payment.
 
 Technologies we used:  Android Studio, Firebase, Figma, Canva.
 
