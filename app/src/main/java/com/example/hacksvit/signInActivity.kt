@@ -1,5 +1,6 @@
 package com.example.hacksvit
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -25,9 +26,8 @@ class signInActivity : AppCompatActivity() {
         auth  = Firebase.auth
         val signin_button = findViewById<com.google.android.gms.common.SignInButton>(R.id.google_sign_in)
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-
+            .requestIdToken("851077889947-f5v29go37rjue6ecj54iiso2or5bb9ie.apps.googleusercontent.com")
             .requestEmail()
-            .requestIdToken("851077889947-9c3j5l786l04jam06h5vrf7h7d47r2d8.apps.googleusercontent.com")
             .build()
 
         val googleSignInClient = GoogleSignIn.getClient(this, gso)
@@ -36,9 +36,12 @@ class signInActivity : AppCompatActivity() {
             val signInIntent = googleSignInClient.signInIntent
             startActivityForResult(signInIntent, RC_SIGN_IN)
         }
+
+
+
+
     }
 
-    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data_signin: Intent?) {
         super.onActivityResult(requestCode, resultCode, data_signin)
 
@@ -67,15 +70,20 @@ class signInActivity : AppCompatActivity() {
                     val user = auth.currentUser
 
                     if( task.result!!.additionalUserInfo!!.isNewUser) {
-                        val intent = Intent(this, loginSelectPage::class.java)
+                        val intent = Intent(this, MainActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
+                        Log.w(TAG, "Redirewcted to mainpage", task.exception)
+
+                        //startActivity(Intent(this,SignupActivity::class.java))
                     }
                     else {
-                        val intent = Intent(this, loginSelectPage::class.java)
+                        val intent = Intent(this, signInActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
                         startActivity(intent)
+                        Log.w(TAG, "Redirewcted to signinpage", task.exception)
                     }
+
 
                 } else {
                     // If sign in fails, display a message to the user.
@@ -83,5 +91,6 @@ class signInActivity : AppCompatActivity() {
 
                 }
             }
+
     }
 }
