@@ -9,20 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HackSVIT">
-        <activity
-            android:name=".addcampaigns"
-            android:exported="false" />
-        <activity
-            android:name=".myprofileuser"
-            android:exported="false" />
-        <activity
-            android:name=".myprofile"
-            android:exported="false" />
-        <activity
-            android:name=".editprofile"
-            android:exported="false" />
-        <activity
-            android:name=".signInActivity"
+     
+
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,7 +28,7 @@
             android:name=".loginSelectPage"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".signInActivity"
             android:exported="false" />
     </application>
 
