@@ -32,7 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <EditText
-        android:id="@+id/name_ngo_edit"
+        android:id="@+id/name_vol_edit"
         android:layout_width="277dp"
         android:layout_height="49dp"
         android:layout_marginLeft="49dp"
@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
-        android:id="@+id/email_ngo_edit"
+        android:id="@+id/email_vol_edit"
         android:layout_width="277dp"
         android:layout_height="49dp"
         android:layout_marginLeft="49dp"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
-        android:id="@+id/address_ngo_edit"
+        android:id="@+id/address_vol_edit"
         android:layout_width="277dp"
         android:layout_height="49dp"
         android:layout_marginLeft="49dp"
@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
-        android:id="@+id/phone_ngo_edit"
+        android:id="@+id/phone_vol_edit"
         android:layout_width="277dp"
         android:layout_height="49dp"
         android:layout_marginLeft="49dp"
@@ -85,12 +85,12 @@
 
 
     <ImageButton
-        android:id="@+id/save_edit_ngo"
+        android:id="@+id/editprofile_vol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_save_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone_ngo_edit" />
+        app:layout_constraintTop_toBottomOf="@+id/phone_vol_edit" />
 </androidx.constraintlayout.widget.ConstraintLayout>

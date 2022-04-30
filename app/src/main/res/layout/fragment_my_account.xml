@@ -32,7 +32,7 @@
             app:layout_constraintTop_toBottomOf="@+id/myprofielvolunteer" />
 
         <TextView
-            android:id="@+id/name_ngo_edit"
+            android:id="@+id/name_vol_edit"
             android:layout_width="277dp"
             android:layout_height="49dp"
             android:layout_marginLeft="49dp"
@@ -45,7 +45,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <TextView
-            android:id="@+id/email_ngo_edit"
+            android:id="@+id/email_vol_edit"
             android:layout_width="277dp"
             android:layout_height="49dp"
             android:layout_marginLeft="49dp"
@@ -58,7 +58,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <TextView
-            android:id="@+id/address_ngo_edit"
+            android:id="@+id/address_vol_edit"
             android:layout_width="277dp"
             android:layout_height="49dp"
             android:layout_marginLeft="49dp"
@@ -71,7 +71,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <TextView
-            android:id="@+id/phone_ngo_edit"
+            android:id="@+id/phone_vol_edit"
             android:layout_width="277dp"
             android:layout_height="49dp"
             android:layout_marginLeft="49dp"
@@ -85,7 +85,7 @@
 
 
         <ImageButton
-            android:id="@+id/save_edit_ngo"
+            android:id="@+id/editprofile_vol"
             android:layout_width="308dp"
             android:layout_height="60dp"
             android:layout_marginTop="36dp"
@@ -93,17 +93,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.481"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phone_ngo_edit" />
+            app:layout_constraintTop_toBottomOf="@+id/phone_vol_edit" />
 
         <ImageButton
+            android:id="@+id/logout_vol"
             android:layout_width="304dp"
             android:layout_height="65dp"
             android:background="@drawable/ic_logout"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/save_edit_ngo"
+            app:layout_constraintEnd_toEndOf="@+id/editprofile_vol"
             app:layout_constraintHorizontal_bias="0.473"
-            app:layout_constraintStart_toStartOf="@+id/save_edit_ngo"
-            app:layout_constraintTop_toBottomOf="@+id/save_edit_ngo"
+            app:layout_constraintStart_toStartOf="@+id/editprofile_vol"
+            app:layout_constraintTop_toBottomOf="@+id/editprofile_vol"
             app:layout_constraintVertical_bias="0.163" />
 
 
