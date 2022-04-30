@@ -3,8 +3,6 @@ package com.example.hacksvit
 import com.google.firebase.database.Exclude
 
 class userLogindata (
-
-
     var Name: String? = "",
     var Address: String? = "",
     var Email: String? = "",

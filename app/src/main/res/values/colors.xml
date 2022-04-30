@@ -10,4 +10,5 @@
     <color name="backgroundColor">#000049</color>
     <color name="indigo">#4B0082</color>
     <color name="orange">#FF5722</color>
+    <color name="yellow">#FFFF00</color>
 </resources>

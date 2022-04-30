@@ -30,7 +30,6 @@ class ngoLoginPage : AppCompatActivity() {
 
             )
 
-
         }
 
     }
@@ -48,5 +47,6 @@ class ngoLoginPage : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
 
       }
+
     }
 }
