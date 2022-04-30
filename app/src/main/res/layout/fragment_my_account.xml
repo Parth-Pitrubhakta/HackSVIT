@@ -1,14 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.MyAccount">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="My Account Fragment" />
+        android:layout_height="match_parent">
+
+        <ImageView
+
+            android:id="@+id/myprofielvolunteer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/ic_my_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="126dp"
+            android:layout_height="122dp"
+            android:layout_marginTop="68dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.459"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myprofielvolunteer" />
+
+        <TextView
+            android:id="@+id/name_vol_edit"
+            android:layout_width="277dp"
+            android:layout_height="49dp"
+            android:layout_marginLeft="49dp"
+            android:layout_marginTop="48dp"
+            android:hint="Name"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/email_vol_edit"
+            android:layout_width="277dp"
+            android:layout_height="49dp"
+            android:layout_marginLeft="49dp"
+            android:layout_marginTop="108dp"
+            android:hint="Email"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/address_vol_edit"
+            android:layout_width="277dp"
+            android:layout_height="49dp"
+            android:layout_marginLeft="49dp"
+            android:layout_marginTop="164dp"
+            android:hint="Address"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/phone_vol_edit"
+            android:layout_width="277dp"
+            android:layout_height="49dp"
+            android:layout_marginLeft="49dp"
+            android:layout_marginTop="220dp"
+            android:hint="Phone No"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.007"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/editprofile_vol"-->
+        <!--            android:layout_width="308dp"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_marginTop="36dp"-->
+        <!--            android:background="@drawable/editprofielimg"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.481"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/phone_vol_edit" />-->
+
+        <ImageButton
+            android:id="@+id/logout_vol"
+            android:layout_width="304dp"
+            android:layout_height="65dp"
+            android:background="@drawable/ic_logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/phone_vol_edit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/phone_vol_edit"
+            app:layout_constraintTop_toBottomOf="@+id/phone_vol_edit"
+            app:layout_constraintVertical_bias="0.492" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>

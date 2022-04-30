@@ -12,7 +12,6 @@ import com.example.hacksvit.data.ngodata
 
 class NgoList_Adapter(var data: List<ngodata>) : RecyclerView.Adapter<NgoList_Adapter.IntViewHolder>()  {
     class IntViewHolder(val  row: View) : RecyclerView.ViewHolder(row)  {
-        val imageView = row.findViewById<ImageView>(R.id.itemImage)
         val textView1 = row.findViewById<TextView>(R.id.textView1)
         val textView2 = row.findViewById<TextView>(R.id.textView2)
 
@@ -28,7 +27,6 @@ class NgoList_Adapter(var data: List<ngodata>) : RecyclerView.Adapter<NgoList_Ad
     override fun onBindViewHolder(holder: IntViewHolder, position: Int) {
 
         val item=data[position]
-        holder.imageView.setBackgroundResource(item.img1)
         holder.textView1.text=item.ngoname.toString()
         holder.textView2.text=item.category.toString()
 

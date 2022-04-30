@@ -7,9 +7,11 @@ import com.example.hacksvit.R.id.bottom_navigation
 import com.example.hacksvit.fragments.Dashboard
 import com.example.hacksvit.fragments.MyAccount
 import com.example.hacksvit.fragments.Nearby_NGO
+
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+
 
     private val dashboard= Dashboard()
     private val nearby= Nearby_NGO()
