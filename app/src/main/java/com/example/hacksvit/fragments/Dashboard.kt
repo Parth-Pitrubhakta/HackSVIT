@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hacksvit.Adapter.ImageSS_Adapterr
 import com.example.hacksvit.R
 import com.example.hacksvit.data.imagedata
+import com.example.hacksvit.data.ngodata
 
 
 class Dashboard : Fragment() {
@@ -29,9 +30,11 @@ class Dashboard : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val data1= arrayListOf<imagedata>()
+        val data2= arrayListOf<ngodata>()
 
         data1.add(imagedata(R.drawable.image1))
         data1.add(imagedata(R.drawable.image2))
+
 
 
         val recycler = view.findViewById<RecyclerView>(R.id.recyclerView1)

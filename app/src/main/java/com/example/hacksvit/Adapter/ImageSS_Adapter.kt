@@ -24,7 +24,8 @@ class ImageSS_Adapterr(var imagess_data: List<imagedata>) : RecyclerView.Adapter
 
     override fun onBindViewHolder(holder: IntViewHolder, position: Int) {
         val item=imagess_data[position]
-        holder.imageView.setBackgroundResource(item.img)      }
+        holder.imageView.setBackgroundResource(item.img)
+    }
 
     override fun getItemCount(): Int {
           return imagess_data.size
