@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".profileNgo">
 
-
     <TextView
         android:id="@+id/profile_ngo"
         android:layout_width="222dp"
