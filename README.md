@@ -10,7 +10,7 @@ Challenges we ran into: 1. Implementing RazorPay for payment gateway.
 2. Google Authentication
 3.  Sending acknowledgment notification to the user after payment.
 
-Technologies we used:  Android Studio, Firebase, Figma, Canva.
+Technologies we used:  Android Studio, Firebase, GitHub, Figma, Canva.
 
 Links: 1. Figma: https://www.figma.com/file/RO3KvmPcuYt8qc6WyaItCM/CharityHub?node-id=0%3A1 <br/>
        2. GitHub: https://github.com/Parth-Pitrubhakta/HackSVIT <br/>
