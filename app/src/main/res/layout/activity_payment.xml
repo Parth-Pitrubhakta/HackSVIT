@@ -20,13 +20,18 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
 
-    <ImageView
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/razorPay_imageView"
-        android:layout_below="@+id/amount_editText"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ic_rect2"
         android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/amount_editText"
         android:layout_centerHorizontal="true"
-        android:layout_height="100dp"/>
+        android:layout_marginTop="20dp"
+        android:elevation="40dp"
+        android:src="@drawable/ic_rect2"
+        android:text="Pay"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp" />
 
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.example.hacksvit.fragments
 
 import android.content.ContentValues
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -9,8 +10,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 import com.example.hacksvit.R
+import com.example.hacksvit.signInActivity
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -44,11 +47,14 @@ class MyAccount : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+
         val name_edit = view.findViewById<TextView>(R.id.name_vol_edit)
         val email_edit = view.findViewById<TextView>(R.id.email_vol_edit)
         val address_edit = view.findViewById<TextView>(R.id.address_vol_edit)
         val phone_no_edit = view.findViewById<TextView>(R.id.phone_vol_edit)
-        //val logout_vol =view.findViewById<Button>(R.id.logout_vol)
+
+
 
         val database = Firebase.database.getReference("Volunteers/${Firebase.auth.uid}")
         database.addValueEventListener(object : ValueEventListener {
@@ -72,7 +78,17 @@ class MyAccount : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_account, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_my_account, container, false)
+
+        val logout_vol =view.findViewById<Button>(R.id.logout_vol)
+        logout_vol.setOnClickListener {
+            Firebase.auth.signOut()
+            val intent = Intent(context, signInActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or (Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }
+
+        return view
     }
 
     companion object {
