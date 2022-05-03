@@ -35,6 +35,7 @@
         android:id="@+id/name_vol_edit"
         android:layout_width="277dp"
         android:layout_height="49dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_marginLeft="49dp"
         android:layout_marginTop="48dp"
         android:hint="Name"

@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hacksvit.R
 import com.example.hacksvit.DonorsitemsViewModel
+import com.example.hacksvit.R
 
 class donors_Adapter(var data: List<DonorsitemsViewModel>) : RecyclerView.Adapter<donors_Adapter.IntViewHolder>() {
 
@@ -22,6 +22,7 @@ class donors_Adapter(var data: List<DonorsitemsViewModel>) : RecyclerView.Adapte
         val layout = LayoutInflater.from(parent.context)
             .inflate(R.layout.card_view_design,parent, false)
         val holder= donors_Adapter.IntViewHolder(layout)
+
         return holder
     }
 
