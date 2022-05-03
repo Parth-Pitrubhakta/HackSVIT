@@ -12,6 +12,14 @@
         <activity
             android:name=".donorsOrContributorsPage"
             android:exported="false" />
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_uCJhRdrgYWVcz6" />
+
+        <activity
+            android:name=".paymentIntergation"
+            android:exported="false" />
         <activity
             android:name=".profileNgo"
             android:exported="false" />
