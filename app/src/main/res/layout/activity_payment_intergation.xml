@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,25 +8,44 @@
 
     <EditText
         android:id="@+id/amount_editText"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="338dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="32dp"
         android:background="@color/white"
-        android:textSize="16sp"
-        android:textColor="@color/black"
-        android:textStyle="normal"
-        android:padding="10dp"
         android:hint="Enter Your Amount"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/razorPay_imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/amount_editText"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_rect2"
-        android:layout_width="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_height="100dp"/>
+        app:layout_constraintEnd_toEndOf="@+id/amount_editText"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/amount_editText"
+        app:layout_constraintTop_toBottomOf="@+id/amount_editText" />
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/razorPay_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/razorPay_imageView"
+        app:layout_constraintStart_toStartOf="@+id/razorPay_imageView"
+        app:layout_constraintTop_toTopOf="@+id/razorPay_imageView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,7 +14,7 @@ class profileNgo : AppCompatActivity() {
 
         val donors_contributors  = findViewById<ImageButton>(R.id.donors_contributors)
         donors_contributors.setOnClickListener {
-            startActivity(Intent(this, ngoLoginPage::class.java))
+            startActivity(Intent(this, donorsOrContributorsPage::class.java))
         }
         val add_campaigns  = findViewById<ImageButton>(R.id.add_campaigns)
         add_campaigns.setOnClickListener {
