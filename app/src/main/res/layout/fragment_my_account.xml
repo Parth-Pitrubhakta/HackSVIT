@@ -25,7 +25,7 @@
             android:layout_width="143dp"
             android:layout_height="132dp"
             android:layout_marginTop="32dp"
-            android:src="@drawable/ic_my_profile"
+            android:src="@drawable/ic_baseline_profile_circle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.466"
             app:layout_constraintStart_toStartOf="parent"
