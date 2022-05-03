@@ -27,10 +27,8 @@ class ngoLoginPage : AppCompatActivity() {
 
             updatedata(Name_ngo.text.toString(),Address_ngo.text.toString(),
                 Email_ngo.text.toString(),Phone_no_ngo.text.toString()
-
             )
         }
-
     }
 
     private fun updatedata(Name_ngo: String, Address_ngo: String, Email_ngo: String, Phone_no_ngo: String) {

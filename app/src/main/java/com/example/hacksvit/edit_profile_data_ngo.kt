@@ -10,7 +10,6 @@ class edit_profile_data_ngo(
     var phone_no_edit: String? = ""
 ) {
 
-
     @Exclude
     fun toMap(): Map<String, Any?> {
         return mapOf(
