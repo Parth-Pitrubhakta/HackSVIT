@@ -5,7 +5,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import com.google.firebase.auth.ktx.auth
@@ -20,13 +19,12 @@ class edit_Profile_Ngo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profile_ngo)
 
+        val name_edit = findViewById<EditText>(R.id.name_vol_edit)
+        val email_edit = findViewById<EditText>(R.id.email_vol_edit)
+        val address_edit = findViewById<EditText>(R.id.address_vol_edit)
+        val phone_no_edit = findViewById<EditText>(R.id.phone_vol_edit)
 
-        val name_edit = findViewById<EditText>(R.id.name_ngo_edit)
-        val email_edit = findViewById<EditText>(R.id.email_ngo_edit)
-        val address_edit = findViewById<EditText>(R.id.address_ngo_edit)
-        val phone_no_edit = findViewById<EditText>(R.id.phone_ngo_edit)
-
-        val save_btn = findViewById<ImageButton>(R.id.save_edit_ngo)
+        val save_btn = findViewById<ImageButton>(R.id.editprofile_vol)
         save_btn.setOnClickListener {
 
             updatedata(
@@ -36,7 +34,6 @@ class edit_Profile_Ngo : AppCompatActivity() {
             )
 
         }
-
 
         val database = Firebase.database.getReference("NGO/${Firebase.auth.uid}")
         database.addValueEventListener(object : ValueEventListener {
