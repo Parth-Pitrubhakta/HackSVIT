@@ -12,6 +12,11 @@ class profileNgo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile_ngo)
 
+        val editprofile_ngo = findViewById<ImageButton>(R.id.edit_ngo)
+        editprofile_ngo.setOnClickListener {
+            startActivity(Intent(this, ngoLoginPage::class.java))
+        }
+
         val donors_contributors  = findViewById<ImageButton>(R.id.donors_contributors)
         donors_contributors.setOnClickListener {
             startActivity(Intent(this, donorsOrContributorsPage::class.java))
