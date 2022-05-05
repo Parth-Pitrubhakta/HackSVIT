@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,7 +23,7 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.database.ktx.database
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DataSnapshot
-
+import org.w3c.dom.Text
 
 
 class Dashboard : Fragment() {
@@ -41,11 +42,14 @@ class Dashboard : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val text_ngo_name = view.findViewById<TextView>(R.id.text_ngo_name)
+        val text_campaign_name = view.findViewById<TextView>(R.id.text_campaign_name)
         val data1 = arrayListOf<imagedata>()
+
 
         data1.add(imagedata(R.drawable.image1))
         data1.add(imagedata(R.drawable.image2))
-
 
        val database = FirebaseDatabase.getInstance().getReference("NGO/Campaign")
         val ngo_data = arrayListOf<ngodata>()
@@ -72,9 +76,9 @@ class Dashboard : Fragment() {
         recycler.layoutManager = GridLayoutManager(view.context, 2)
         recycler.adapter = NgoList_Adapter(ngo_data)
 
-
          }
 
         })
+
     }
 }
