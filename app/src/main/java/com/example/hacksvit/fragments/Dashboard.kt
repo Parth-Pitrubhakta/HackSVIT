@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,21 +15,13 @@ import com.example.hacksvit.Adapter.NgoList_Adapter
 import com.example.hacksvit.R
 import com.example.hacksvit.data.imagedata
 import com.example.hacksvit.data.ngodata
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.database.ktx.database
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DataSnapshot
-import org.w3c.dom.Text
 
 
 class Dashboard : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -43,8 +34,8 @@ class Dashboard : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val text_ngo_name = view.findViewById<TextView>(R.id.text_ngo_name)
-        val text_campaign_name = view.findViewById<TextView>(R.id.text_campaign_name)
+//        val text_ngo_name = view.findViewById<TextView>(R.id.text_ngo_name)
+//        val text_campaign_name = view.findViewById<TextView>(R.id.text_campaign_name)
         val data1 = arrayListOf<imagedata>()
 
 
@@ -52,7 +43,7 @@ class Dashboard : Fragment() {
         data1.add(imagedata(R.drawable.image2))
 
        val database = FirebaseDatabase.getInstance().getReference("NGO/Campaign")
-        val ngo_data = arrayListOf<ngodata>()
+        val ngoData = arrayListOf<ngodata>()
 
         database.addListenerForSingleValueEvent(object : ValueEventListener {
            override fun onCancelled(p0: DatabaseError) {
@@ -64,8 +55,8 @@ class Dashboard : Fragment() {
 
                     val ngodat = i.getValue<ngodata>()
 
-                   ngodat?.let { ngo_data.add(it) }
-                   Log.e(ContentValues.TAG, "user info" + ngodat)
+                   ngodat?.let { ngoData.add(it) }
+                   Log.e(ContentValues.TAG, "user info$ngodat")
                }
         val recycler1 = view.findViewById<RecyclerView>(R.id.recyclerView1)
         recycler1.layoutManager =
@@ -74,7 +65,7 @@ class Dashboard : Fragment() {
 
         val recycler = view.findViewById<RecyclerView>(R.id.recyclerView2)
         recycler.layoutManager = GridLayoutManager(view.context, 2)
-        recycler.adapter = NgoList_Adapter(ngo_data)
+        recycler.adapter = NgoList_Adapter(ngoData)
 
          }
 
