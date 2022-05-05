@@ -4,18 +4,16 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hacksvit.R
-import com.example.hacksvit.data.imagedata
 import com.example.hacksvit.data.ngodata
 import com.example.hacksvit.paymentIntergation
 
 class NgoList_Adapter(var data: List<ngodata>) : RecyclerView.Adapter<NgoList_Adapter.IntViewHolder>()  {
     class IntViewHolder(val  row: View) : RecyclerView.ViewHolder(row)  {
-        val textView1 = row.findViewById<TextView>(R.id.textView1)
-        val textView2 = row.findViewById<TextView>(R.id.textView2)
+        val textView1 = row.findViewById<TextView>(R.id.text_ngo_name)
+        val textView2 = row.findViewById<TextView>(R.id.text_campaign_name)
 
     }
 

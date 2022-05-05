@@ -15,12 +15,12 @@ class loginSelectPage : AppCompatActivity() {
         var btnNgoLogin = findViewById<View>(R.id.btn_ngoLogin)
 
         btnVolunteerLogin.setOnClickListener{
-            val intent = Intent(this, volunteerLoginPage::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
         btnNgoLogin.setOnClickListener {
-            val intent = Intent(this, ngoLoginPage::class.java)
+            val intent = Intent(this, profileNgo::class.java)
             startActivity(intent)
         }
 
