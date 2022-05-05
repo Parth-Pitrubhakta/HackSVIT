@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,10 +16,13 @@ import com.example.hacksvit.Adapter.NgoList_Adapter
 import com.example.hacksvit.R
 import com.example.hacksvit.data.imagedata
 import com.example.hacksvit.data.ngodata
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.database.ktx.getValue
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 
 class Dashboard : Fragment() {
@@ -33,7 +37,7 @@ class Dashboard : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val vol_name = view.findViewById<TextView>(R.id.vol_name)
 //        val text_ngo_name = view.findViewById<TextView>(R.id.text_ngo_name)
 //        val text_campaign_name = view.findViewById<TextView>(R.id.text_campaign_name)
         val data1 = arrayListOf<imagedata>()
@@ -69,6 +73,18 @@ class Dashboard : Fragment() {
 
          }
 
+        })
+
+        val database2 = Firebase.database.getReference("Volunteers/${Firebase.auth.uid}")
+        database2.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                vol_name.setText(snapshot.child("Name").value.toString())
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.e(ContentValues.TAG, error.toString())
+            }
         })
 
     }
